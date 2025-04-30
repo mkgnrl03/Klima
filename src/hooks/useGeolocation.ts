@@ -28,14 +28,17 @@ export function useGeolocation() {
     }
 
     const onSuccessGeo = (position: GeolocationPosition) => {
-      setLocation({
-        coordinates: { 
-          lat: position.coords.latitude,
-          lon: position.coords.latitude
-        },
-        isLoading: false,
-        error: null
-      })
+       setTimeout(() => {
+        setLocation({
+          coordinates: { 
+            lat: position.coords.latitude,
+            lon: position.coords.longitude
+          },
+          isLoading: false,
+          error: null
+        })
+      }, 500)
+
     }
     const onErrorGeo = (error: GeolocationPositionError) => {
       let errorMessage: string = '';

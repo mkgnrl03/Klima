@@ -1,5 +1,5 @@
-import WeatherDashboard from "./weather-dashboard"
-import CityPage from "./city-page"
+import WeatherDashboard from "./WeatherDashboard"
+import CityPage from "./CityPage"
 
 export {
   WeatherDashboard,

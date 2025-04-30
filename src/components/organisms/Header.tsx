@@ -16,16 +16,9 @@ export default function Header() {
   }
 
   return (
-    <header className='sticky top-0 z-50 shadow-md p-6 flex justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'> 
+    <header className='sticky top-0 z-50 shadow-md p-4 flex justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'> 
       <h1> <Link to={"/"}>Klima</Link></h1>
-      <ul className="flex gap-3 items-center">
-        <li>
-          <Link to={"/"}>Home</Link>
-        </li>
-        <li>
-          <Link to={"/city"}>City</Link>
-        </li>
-        <li 
+        <div
           className={`
             cursor-pointer transition p-2 rounded duration-500
             ${isDarkMode ? 'rotate-180' : 'rotate-reverse-0' }
@@ -33,10 +26,9 @@ export default function Header() {
           onClick={handleThemeToggle}
         >
           {
-           isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />
+           isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />
           }
-        </li>
-      </ul>
+        </div>
     </header>
   )
 }
