@@ -42,7 +42,7 @@ export default function UserLocationCard(props: UserLocationCardProps) {
     </>
   }
   return (
-    <Card className="w-[500px]">
+    <Card className="w-full sm:w-[500px]">
       <CardHeader>
         <CardTitle className="text-xl">{props.data.name}</CardTitle>
         <CardDescription>{props.data.sys.country}</CardDescription>

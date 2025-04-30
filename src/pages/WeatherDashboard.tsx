@@ -20,8 +20,6 @@ const weatherQuery = useWeatherQuery(coordinates)
 const locationQuery = useReverseGeocodeQuery(coordinates)
 const forecastQuery = useForecastQuery(coordinates)
 
-console.log(weatherQuery.data, locationQuery.data)
-
 const handleRefresh = () => {
   getLocation()
   if(coordinates) {
